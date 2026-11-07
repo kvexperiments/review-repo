@@ -1,0 +1,16 @@
+{
+  "name": "PR 142 review",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "cd review-repo && npm install",
+  "postAttachCommand": "cd review-repo && npm run dev",
+  "forwardPorts": [3000],
+  "portsAttributes": { "3000": { "label": "App", "onAutoForward": "openPreview" } },
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["review-repo/README.md", "review-repo/AI_REVIEW.md", "review-repo/REVIEW.md"]
+    },
+    "vscode": {
+      "settings": { "github.copilot.enable": { "*": false } }
+    }
+  }
+}
